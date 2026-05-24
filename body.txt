@@ -1,49 +1,57 @@
 body {
   margin: 0;
-  background: black;
   overflow: hidden;
+  background: black;
   font-family: Arial;
 }
 
 #game {
   width: 100vw;
   height: 100vh;
+  background: radial-gradient(circle at center, #0b0f14, #000);
   position: relative;
-  background: radial-gradient(circle at center, #111, #000);
+}
+
+/* WORLD LAYER */
+#world {
+  width: 2000px;
+  height: 2000px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* PLAYER */
 #player {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background: white;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 1000px;
+  left: 1000px;
+  border-radius: 50%;
 }
 
 /* ENEMY */
 #enemy {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   background: red;
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 400px;
+  left: 400px;
+  border-radius: 50%;
 }
 
-/* FLASHLIGHT EFFECT */
+/* FLASHLIGHT (VISUAL CONE) */
 #flashlight {
   position: absolute;
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.05);
-  filter: blur(40px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.06);
+  filter: blur(35px);
+  pointer-events: none;
 }
 
 /* UI */
@@ -52,4 +60,5 @@ body {
   top: 10px;
   left: 10px;
   color: white;
+  font-size: 14px;
 }
